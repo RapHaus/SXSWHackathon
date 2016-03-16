@@ -64,14 +64,13 @@ function showPositionLyft(position) {
 
     var lyftApiUrl = "http://rap.haus/scripts/php/lyft_api.php?lat="+userLat+"&lng="+userLng;
     $.get(lyftApiUrl, function(data, status){
-        debugger;
         var obj = JSON.parse(data);
         var string = "";
         if(null != obj.eta_estimates){
             var a = obj.eta_estimates;
 
             a.forEach(function(entry) {
-                string += "<p>" + entry.display_name + ", " + entry.eta_seconds + "</p>";
+                string += entry.display_name + ", " + entry.eta_seconds + "</br>";
             });
         }
 
