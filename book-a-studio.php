@@ -200,6 +200,10 @@ $username = htmlentities($_SESSION['username']);
             <!-- /.aside -->
             <section id="content">
                 <section class="vbox">
+                    <div class="alert alert-success" id="lyft-info" style="display:none;" >
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+
+                    </div>
                     <section class="scrollable wrapper">
                         <header class="panel-heading font-bold">
                             Select a Studio

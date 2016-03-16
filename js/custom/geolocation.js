@@ -71,11 +71,15 @@ function showPositionLyft(position) {
             var a = obj.eta_estimates;
 
             a.forEach(function(entry) {
-                string += entry.display_name + ", " + entry.eta_seconds + '<\br>';
+                string += entry.display_name + ", " + entry.eta_seconds + '<\\br>';
             });
         }
 
-        alert(string);
+        var lyftAlert = document.getElementById("lyft-info");
+        lyftAlert.style = "display:inline !important;";
+        lyftAlert.innerText = string;
+
+        //alert(string);
     });
 
     //var studioLocations = document.getElementsByClassName("studio-location");
