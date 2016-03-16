@@ -220,6 +220,7 @@ $username = htmlentities($_SESSION['username']);
                                                 </a>
                                             </div>
                                         </section>
+                                        <a href="#modal-form" class="btn btn-success" data-toggle="modal">Modal!</a>
                                         <section class="panel panel-default">
                                             <a href="#modal-form" data-toggle="modal">
                                                 <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
