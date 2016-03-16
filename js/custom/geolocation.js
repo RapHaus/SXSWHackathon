@@ -12,6 +12,14 @@ function getLocation() {
     }
 }
 
+function getLocationForLyft() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPositionLyft, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
 function showPosition(position) {
     var studioLocations = document.getElementsByClassName("studio-location");
 
@@ -42,6 +50,26 @@ function showPosition(position) {
 
         });
     }
+
+    //var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    //var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    //    +latlon+"&zoom=14&size=400x300&sensor=false";
+    //document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showPositionLyft(position) {
+    var userLat = position.coords.latitude;
+    var userLng = position.coords.longitude;
+
+    var lyftApiUrl = "../../scripts/php/lyft_api.php?lat="+userLat+"&lng="+userLng;
+    $.get(lyftApiUrl, function(data, status){
+        debugger;
+        alert(data);
+    }
+
+    //var studioLocations = document.getElementsByClassName("studio-location");
+
 
     //var latlon = position.coords.latitude + "," + position.coords.longitude;
 
