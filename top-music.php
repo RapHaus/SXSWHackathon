@@ -3,8 +3,6 @@ include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/nav.php';
 
-echo $nav + "hello";
-
 sec_session_start();
 if(login_check($mysqli) == true) {
     $username = htmlentities($_SESSION['username']);
