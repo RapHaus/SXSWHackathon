@@ -103,7 +103,7 @@
                     <form action="#">
                         </br></br></br></br></br>
                         <a href="profile.php" class="btn btn-lg btn-success btn-block rounded">Artist</a>
-                        <a href="profile.php" class="btn btn-lg btn-success btn-block rounded">Fan</a>
+                        <a href="top-music.php" class="btn btn-lg btn-success btn-block rounded">Fan</a>
                         <a href="profile.php" class="btn btn-lg btn-success btn-block rounded">Producer</a>
                     </form>
                 </section>
