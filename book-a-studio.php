@@ -199,11 +199,10 @@ $username = htmlentities($_SESSION['username']);
             </aside>
             <!-- /.aside -->
             <section id="content">
+                <div class="alert alert-success" id="lyft-info" style="display:none;">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                </div>
                 <section class="vbox">
-                    <div class="alert alert-success" id="lyft-info" style="display:none;" >
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-
-                    </div>
                     <section class="scrollable wrapper">
                         <header class="panel-heading font-bold">
                             Select a Studio
