@@ -200,7 +200,7 @@ $username = htmlentities($_SESSION['username']);
                                         <section class="panel panel-default">
                                             <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
                                                 <div class="clearfix">
-                                                    <a href="#" class="pull-left thumb-md avatar b-3x m-r">
+                                                    <a href="#modal-form" class="btn btn-success" data-toggle="modal" class="pull-left thumb-md avatar b-3x m-r">
                                                         <img src="images/studios/VOTK.png" alt="...">
                                                     </a>
                                                     <div class="clear">
@@ -220,24 +220,21 @@ $username = htmlentities($_SESSION['username']);
                                                 </a>
                                             </div>
                                         </section>
-                                        <a href="#modal-form" class="btn btn-success" data-toggle="modal">Modal!</a>
                                         <section class="panel panel-default">
-                                            <a href="#modal-form" data-toggle="modal">
-                                                <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
-                                                    <div class="clearfix">
-                                                        <a href="#" class="pull-left thumb-md avatar b-3x m-r">
-                                                            <img src="images/studios/Legacy.png" alt="...">
-                                                        </a>
-                                                        <div class="clear">
-                                                            <div class="h3 m-t-xs m-b-xs">
-                                                                Legacy Music Group
-                                                                <i class="fa fa-circle text-success pull-right text-xs m-t-sm"></i>
-                                                            </div>
-                                                            <small class="text-muted">Dallas, TX</small>
+                                            <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
+                                                <div class="clearfix">
+                                                    <a href="#modal-form" class="btn btn-success" data-toggle="modal" class="pull-left thumb-md avatar b-3x m-r">
+                                                        <img src="images/studios/Legacy.png" alt="...">
+                                                    </a>
+                                                    <div class="clear">
+                                                        <div class="h3 m-t-xs m-b-xs">
+                                                            Legacy Music Group
+                                                            <i class="fa fa-circle text-success pull-right text-xs m-t-sm"></i>
                                                         </div>
+                                                        <small class="text-muted">Dallas, TX</small>
                                                     </div>
-                                                </header>
-                                            </a>
+                                                </div>
+                                            </header>
                                             <div class="list-group no-radius alt">
                                                 <a class="list-group-item studio-location" href="#" style="cursor: default;">
                                                     <span class="badge bg-success studio-location-distance"></span>
