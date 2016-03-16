@@ -212,7 +212,7 @@ $username = htmlentities($_SESSION['username']);
                                             <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
                                                 <div class="clearfix">
                                                     <a href="#" class="pull-left thumb-md avatar b-3x m-r">
-                                                        <img src="images/studios/legacy.png" alt="...">
+                                                        <img src="images/studios/Legacy.png" alt="...">
                                                     </a>
                                                     <div class="clear">
                                                         <div class="h3 m-t-xs m-b-xs">
