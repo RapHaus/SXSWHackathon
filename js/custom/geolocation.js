@@ -75,7 +75,7 @@ function showPositionLyft(position) {
         }
 
         var lyftAlert = document.getElementById("lyft-info");
-        lyftAlert.style = "display:inline !important;";
+        lyftAlert.style = "display: !important;";
         lyftAlert.innerHtml += string;
 
         //alert(string);
