@@ -77,7 +77,7 @@
                     <ul class="dropdown-menu animated fadeInRight">
                         <li>
                             <span class="arrow top"></span>
-                            <a href="#">Sign In</a>
+                            <a href="signin.php">Sign In</a>
                         </li>
                     </ul>
                 </li>
