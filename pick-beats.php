@@ -135,6 +135,12 @@ $username = htmlentities($_SESSION['username']);
                                             <span class="font-bold">My Calendar</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="upload.php">
+                                            <i class="icon-cloud-upload icon text-success"></i>
+                                            <span class="font-bold">Upload</span>
+                                        </a>
+                                    </li>
                                     <li class="m-b hidden-nav-xs"></li>
                                 </ul>
                             </nav>
