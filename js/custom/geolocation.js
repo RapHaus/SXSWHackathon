@@ -67,14 +67,14 @@ function showPositionLyft(position) {
         debugger;
         var obj = JSON.parse(data);
         var string = "";
-        if(NULL != obj.eta_estimates){
+        if(null != obj.eta_estimates){
             var a = obj.eta_estimates;
 
             a.forEach(function(entry) {
                 string += a.display_name + ", " + a.eta_seconds + '<\br>';
             });
         }
-        
+
         alert(string);
     });
 
