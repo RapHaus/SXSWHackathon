@@ -1,17 +1,17 @@
 <?php
-    include_once 'includes/db_connect.php';
-    include_once 'includes/functions.php';
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
 
-    sec_session_start();
-    if(login_check($mysqli) == true) {
-        $username = htmlentities($_SESSION['username']);
+sec_session_start();
+if(login_check($mysqli) == true) {
+$username = htmlentities($_SESSION['username']);
 ?>
 
 <!DOCTYPE html>
 <html lang="en" class="app">
 <head>
     <meta charset="utf-8" />
-    <title>Musik | Web Application</title>
+    <title>Rap.Haus | Web Application</title>
     <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
     <link rel="stylesheet" href="css/font.css" type="text/css" />
     <link rel="stylesheet" href="css/app.css" type="text/css" />
-
     <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
@@ -30,15 +29,15 @@
 </head>
 <body class="">
 <section class="vbox">
-    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
-        <div class="navbar-header aside bg-info dk">
+    <header class="bg-black lter header header-md navbar navbar-fixed-top-xs">
+        <div class="navbar-header aside bg-success nav-xs">
             <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
                 <i class="icon-list"></i>
             </a>
             <a href="index.html" class="navbar-brand text-lt">
                 <i class="icon-earphones"></i>
                 <img src="images/logo.png" alt="." class="hide">
-                <span class="hidden-nav-xs m-l-sm">Musik</span>
+                <span class="hidden-nav-xs m-l-sm">Rap.Haus</span>
             </a>
             <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
                 <i class="icon-settings"></i>
@@ -99,7 +98,7 @@
     <section>
         <section class="hbox stretch">
             <!-- .aside -->
-            <aside class="bg-black dk aside hidden-print" id="nav">
+            <aside class="bg-black dk nav-xs aside hidden-print" id="nav">
                 <section class="vbox">
                     <section class="w-f-md scrollable">
                         <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
@@ -113,7 +112,7 @@
                                         Discover Beats
                                     </li>
                                     <li>
-                                        <a href="pick-beats.php">
+                                        <a href="#">
                                             <i class="icon-disc icon text-success"></i>
                                             <span class="font-bold">What's new</span>
                                         </a>
@@ -125,7 +124,7 @@
                                         Recording Studio
                                     </li>
                                     <li>
-                                        <a href="book-a-studio.php">
+                                        <a href="#">
                                             <i class="icon-microphone icon text-success"></i>
                                             <span class="font-bold">Book a Session</span>
                                         </a>
@@ -137,11 +136,11 @@
                         </div>
                     </section>
 
-                    <footer class="footer no-padder text-center-nav-xs">
-                        <div class="bg ">
+                    <footer class="footer hidden-xs no-padder text-center-nav-xs">
+                        <div class="bg hidden-xs ">
                             <div class="dropdown dropup wrapper-sm clearfix">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <span class="thumb-sm avatar pull-left m-l-xs">
+                      <span class="thumb-sm avatar pull-left m-l-xs">                        
                         <img src="images/a3.png" class="dker" alt="...">
                         <i class="on b-black"></i>
                       </span>
@@ -182,68 +181,15 @@
             <!-- /.aside -->
             <section id="content">
                 <section class="vbox">
-                    <section class="scrollable">
-                        <section class="hbox stretch">
-                            <aside class="aside-lg bg-light lter b-r">
-                                <section class="vbox">
+                    <section class="w-f-md">
+                        <section class="hbox stretch bg-black dker">
+                            <!-- side content -->
+                            <aside class="col-sm-5 no-padder" id="sidebar">
+                                <section class="vbox animated fadeInUp">
                                     <section class="scrollable">
-                                        <div class="wrapper">
-                                            <div class="text-center m-b m-t">
-                                                <a href="#" class="thumb-lg">
-                                                    <img src="images/a0.png" class="img-circle">
-                                                </a>
-                                                <div>
-                                                    <div class="h3 m-t-xs m-b-xs"><?php echo $username; ?></div>
-                                                    <small class="text-muted"><i class="fa fa-map-marker"></i>Austin, TX</small>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <small class="text-uc text-xs text-muted">about me</small>
-                                                <p>Artist</p>
-                                                <small class="text-uc text-xs text-muted">info</small>
-                                                <p>An emerging rap artist from Austin,TX</p>
-                                                <div class="line"></div>
-                                                <small class="text-uc text-xs text-muted">connection</small>
-                                                <p class="m-t-sm">
-                                                    <a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a>
-                                                    <a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a>
-                                                    <a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </section>
-                            </aside>
-                            <aside class="bg-white">
-                                <section class="vbox">
-                                    <header class="header bg-light lt">
-                                        <ul class="nav nav-tabs nav-white">
-                                            <li class="active"><a href="#activity" data-toggle="tab">Downloaded Beats</a></li>
-                                            <li class=""><a href="#events" data-toggle="tab">Uploads</a></li>
-                                            <li class=""><a href="#interaction" data-toggle="tab">Likes</a></li>
-                                            <li class=""><a href="#interaction" data-toggle="tab">Upcoming Studio Sessions</a></li>
-                                        </ul>
-                                    </header>
-                                    <section class="scrollable">
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="activity">
-                                                <section class="scrollable">
-                                                    <ul id="beats-container" class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
+                                        <ul id="beats-container" class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
 
-                                                    </ul>
-                                                </section>
-                                            </div>
-                                            <div class="tab-pane" id="events">
-                                                <div class="text-center wrapper">
-                                                    <i class="fa fa-spinner fa fa-spin fa fa-large"></i>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane" id="interaction">
-                                                <div class="text-center wrapper">
-                                                    <i class="fa fa-spinner fa fa-spin fa fa-large"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </ul>
                                     </section>
                                 </section>
                             </aside>
@@ -318,9 +264,7 @@
                         </div>
                     </footer>
                 </section>
-
                 <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
-
             </section>
         </section>
     </section>
@@ -331,7 +275,6 @@
 <!-- App -->
 <script src="js/app.js"></script>
 <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-<script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
 <script src="js/app.plugin.js"></script>
 <script type="text/javascript" src="js/custom/populateBeatList.js"></script>
 <script type="text/javascript" src="js/custom/searchInPage.js"></script>
@@ -342,7 +285,7 @@
 </html>
 
 <?php
-    } else {
+} else {
     echo 'You are not authorized to access this page, please login.';
-    }
+}
 ?>

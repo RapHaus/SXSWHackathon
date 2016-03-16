@@ -10,7 +10,7 @@
 
         if (login($email, $password, $mysqli) == true) {
             // Login success
-            header('Location: ../index.html');
+            header('Location: ../profile.php');
         } else {
             // Login failed
             header('Location: ../index.php?error=1');
