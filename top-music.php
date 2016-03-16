@@ -3,6 +3,8 @@ include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/nav.php';
 
+echo $nav + "hello";
+
 sec_session_start();
 if(login_check($mysqli) == true) {
     $username = htmlentities($_SESSION['username']);
@@ -30,7 +32,7 @@ if(login_check($mysqli) == true) {
     </head>
     <body class="">
     <section class="vbox">
-        <header class="bg-white lter header header-md navbar navbar-fixed-top-xs">
+        <header class="bg-black lter header header-md navbar navbar-fixed-top-xs">
             <div class="navbar-header aside bg-success nav-xs">
                 <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
                     <i class="icon-list"></i>
@@ -154,7 +156,7 @@ if(login_check($mysqli) == true) {
                 <section id="content">
                     <section class="vbox">
                         <section class="w-f-md">
-                            <section class="hbox stretch bg-black dker">
+                            <section class="hbox stretch bg-white dker">
                                 <!-- side content -->
                                 <aside class="col-sm-5 no-padder" id="sidebar">
                                     <section class="vbox animated fadeInUp">
