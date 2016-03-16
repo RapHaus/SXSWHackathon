@@ -26,6 +26,19 @@ if (login_check($mysqli) == true) {
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <script type="text/JavaScript" src="js/sha512.js"></script>
     <script type="text/JavaScript" src="js/forms.js"></script>
+
+    <style>
+        #bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            /* Preserve aspet ratio */
+            min-width: 100%;
+            min-height: 100%;
+        }
+    </style>
+
     <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
@@ -33,9 +46,10 @@ if (login_check($mysqli) == true) {
     <![endif]-->
 </head>
 <body class="bg-info dker">
+<img src="images/unbounce.png" id="bg" alt="">
 <section id="content" class="m-t-lg wrapper-md animated fadeInUp">
     <div class="container aside-xl">
-        <a class="navbar-brand block" href="index.html"><span class="h1 font-bold">Rap.Haus</span></a>
+        <a class="navbar-brand block" href="index.html"><span class="h1 font-bold" style="color:#ddd;">Rap.Haus</span></a>
         <section class="m-b-lg">
             <header class="wrapper text-center">
                 <strong>Sign in to get in touch</strong>
