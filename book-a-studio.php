@@ -200,7 +200,7 @@ $username = htmlentities($_SESSION['username']);
                                         <section class="panel panel-default">
                                             <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
                                                 <div class="clearfix">
-                                                    <a href="#modal-form" class="btn btn-success" data-toggle="modal" class="pull-left thumb-md avatar b-3x m-r">
+                                                    <a href="#modal-form" data-toggle="modal" class="pull-left thumb-md avatar b-3x m-r">
                                                         <img src="images/studios/VOTK.png" alt="...">
                                                     </a>
                                                     <div class="clear">
@@ -223,7 +223,7 @@ $username = htmlentities($_SESSION['username']);
                                         <section class="panel panel-default">
                                             <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
                                                 <div class="clearfix">
-                                                    <a href="#modal-form" class="btn btn-success" data-toggle="modal" class="pull-left thumb-md avatar b-3x m-r">
+                                                    <a href="#modal-form" data-toggle="modal" class="pull-left thumb-md avatar b-3x m-r">
                                                         <img src="images/studios/Legacy.png" alt="...">
                                                     </a>
                                                     <div class="clear">
