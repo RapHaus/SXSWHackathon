@@ -79,8 +79,8 @@
             $password = password_hash($password, PASSWORD_BCRYPT);
 
             // Insert the new user into the database
-            if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, firstname, lastname, email, password) VALUES (?, ?, ?)")) {
-                $insert_stmt->bind_param('sss', $username, $firstname, $lastname, $email, $password);
+            if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, firstname, lastname, email, password) VALUES (?, ?, ?, ?, ?)")) {
+                $insert_stmt->bind_param('sssss', $username, $firstname, $lastname, $email, $password);
                 // Execute the prepared query.
                 if (! $insert_stmt->execute()) {
                     header('Location: ../error.php?err=Registration failure: INSERT');
