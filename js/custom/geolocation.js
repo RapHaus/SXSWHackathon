@@ -62,7 +62,7 @@ function showPositionLyft(position) {
     var userLat = position.coords.latitude;
     var userLng = position.coords.longitude;
 
-    var lyftApiUrl = "../../scripts/php/lyft_api.php?lat="+userLat+"&lng="+userLng;
+    var lyftApiUrl = "http://rap.haus/scripts/php/lyft_api.php?lat="+userLat+"&lng="+userLng;
     $.get(lyftApiUrl, function(data, status){
         debugger;
         alert(data);
