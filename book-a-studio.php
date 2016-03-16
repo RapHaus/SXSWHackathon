@@ -199,7 +199,7 @@ $username = htmlentities($_SESSION['username']);
             </aside>
             <!-- /.aside -->
             <section id="content">
-                <div class="alert alert-success" id="lyft-info" style="display:none;">
+                <div class="alert alert-success" id="lyft-info">
                     <button type="button" class="close" data-dismiss="alert">×</button>
                 </div>
                 <section class="vbox">
