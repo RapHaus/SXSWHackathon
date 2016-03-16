@@ -11,7 +11,7 @@ $(document).ready(function(){
       autoPlay: true
     },
     swfPath: "js/jPlayer",
-    supplied: "webmv, ogv, m4v, oga, mp3",
+    supplied: "m4a",
     smoothPlayBar: true,
     keyEnabled: true,
     audioFullScreen: false
