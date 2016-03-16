@@ -71,7 +71,7 @@ function showPositionLyft(position) {
 
             a.forEach(function(entry) {
                 //string += "<p>" + entry.display_name + ", " + entry.eta_seconds + "</p>";
-                str += "<i class='fa fa-ok-sign'></i><strong>"+entry.display_name+": </strong> "+ Math.round(entry.eta_seconds/60.0)+" minutes.<br>";
+                str += "<i class='fa fa-ok-sign'></i><strong>"+entry.display_name+": </strong> "+ Math.round(entry.eta_seconds/60.0)+" minutes away.<br>";
             });
         }
 
