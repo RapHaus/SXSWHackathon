@@ -133,7 +133,7 @@ if(login_check($mysqli) == true) {
                                             Recording Studio
                                         </li>
                                         <li>
-                                            <a href='#'>
+                                            <a href='book-a-studio.php'>
                                                 <i class='icon-microphone icon text-success'></i>
                                                 <span class='font-bold'>Book a Session</span>
                                             </a>
