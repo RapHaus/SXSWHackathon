@@ -44,7 +44,7 @@ $(document).ready(function(){
       var song = this.getAttribute('data-song');
       var url = this.getAttribute('data-path');
 
-      var newSong = {title:song,artist:artist,mp3:url,poster:""};
+      var newSong = {title:song,artist:artist,m4a:url,poster:""};
 
       myPlaylist.add(newSong);
 
