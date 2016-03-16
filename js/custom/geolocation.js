@@ -65,7 +65,17 @@ function showPositionLyft(position) {
     var lyftApiUrl = "http://rap.haus/scripts/php/lyft_api.php?lat="+userLat+"&lng="+userLng;
     $.get(lyftApiUrl, function(data, status){
         debugger;
-        alert(data);
+        var obj = JSON.parse(data);
+        var string = "";
+        if(NULL != obj.eta_estimates){
+            var a = obj.eta_estimates;
+
+            a.forEach(function(entry) {
+                string += a.display_name + ", " + a.eta_seconds + '<\br>';
+            });
+        }
+        
+        alert(string);
     });
 
     //var studioLocations = document.getElementsByClassName("studio-location");
