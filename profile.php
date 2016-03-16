@@ -184,8 +184,7 @@
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
-                                    </li>
+                                        <a href="includes/logout.php" >Logout</a>
                                 </ul>
                             </div>
                         </div>            </footer>

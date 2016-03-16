@@ -88,7 +88,7 @@ $username = htmlentities($_SESSION['username']);
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
+                            <a href="includes/logout.php" >Logout</a>
                         </li>
                     </ul>
                 </li>
