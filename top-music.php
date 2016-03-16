@@ -22,14 +22,6 @@ if(login_check($mysqli) == true) {
         <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
         <link rel="stylesheet" href="css/font.css" type="text/css" />
         <link rel="stylesheet" href="css/app.css" type="text/css" />
-
-        <style>
-            .studio-location:hover { background-color: #ffffff !important; color: #555 !important;}
-            .studio-location { background-color: #ffffff !important; color: #555 !important;}
-            .studio-selection:hover { background-color: #d7e5e8 !important; }
-
-        </style>
-
         <!--[if lt IE 9]>
         <script src="js/ie/html5shiv.js"></script>
         <script src="js/ie/respond.min.js"></script>
@@ -38,8 +30,8 @@ if(login_check($mysqli) == true) {
     </head>
     <body class="">
     <section class="vbox">
-        <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
-            <div class="navbar-header aside bg-success dk">
+        <header class="bg-white lter header header-md navbar navbar-fixed-top-xs">
+            <div class="navbar-header aside bg-success nav-xs">
                 <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
                     <i class="icon-list"></i>
                 </a>
@@ -59,6 +51,16 @@ if(login_check($mysqli) == true) {
                     </a>
                 </li>
             </ul>
+            <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
+                <div class="form-group">
+                    <div class="input-group">
+            <span class="input-group-btn">
+              <button onclick="searchFilterBeats(document.getElementById('beatSearch').value)" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
+            </span>
+                        <input type="text" id="beatSearch" class="form-control input-sm no-border rounded" placeholder="Search songs, albums...">
+                    </div>
+                </div>
+            </form>
             <div class="navbar-right ">
                 <ul class="nav navbar-nav m-n hidden-xs nav-user user">
                     <li class="dropdown">
@@ -87,7 +89,7 @@ if(login_check($mysqli) == true) {
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
+                                <a href="includes/logout.php" >Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -97,13 +99,12 @@ if(login_check($mysqli) == true) {
         <section>
             <section class="hbox stretch">
                 <!-- .aside -->
-                <aside class="bg-white dk aside hidden-print" id="nav">
+                <aside class="bg-black dk nav-xs aside hidden-print" id="nav">
                     <section class="vbox">
                         <section class="w-f-md scrollable">
                             <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
 
                                 <?php echo $nav; ?>
-
                             </div>
                         </section>
 
@@ -111,7 +112,7 @@ if(login_check($mysqli) == true) {
                             <div class="bg hidden-xs ">
                                 <div class="dropdown dropup wrapper-sm clearfix">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <span class="thumb-sm avatar pull-left m-l-xs">
+                      <span class="thumb-sm avatar pull-left m-l-xs">                        
                         <img src="images/a3.png" class="dker" alt="...">
                         <i class="on b-black"></i>
                       </span>
@@ -142,7 +143,7 @@ if(login_check($mysqli) == true) {
                                         </li>
                                         <li class="divider"></li>
                                         <li>
-                                            <a href="includes/logout.php" >Logout</a>
+                                            <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -152,104 +153,106 @@ if(login_check($mysqli) == true) {
                 <!-- /.aside -->
                 <section id="content">
                     <section class="vbox">
-                        <section class="scrollable wrapper">
-                            <header class="panel-heading font-bold">
-                                Select a Studio
-                            </header>
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <section class="panel panel-default">
-                                                <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
-                                                    <div class="clearfix">
-                                                        <a href="#modal-form" data-toggle="modal" class="pull-left thumb-md avatar b-3x m-r">
-                                                            <img src="images/studios/VOTK.png" alt="...">
-                                                        </a>
-                                                        <div class="clear">
-                                                            <div class="h3 m-t-xs m-b-xs">
-                                                                Valley of the King Studios
-                                                                <i class="fa fa-circle text-success pull-right text-xs m-t-sm"></i>
-                                                            </div>
-                                                            <small class="text-muted">Dallas, TX</small>
-                                                        </div>
-                                                    </div>
-                                                </header>
-                                                <div class="list-group no-radius alt">
-                                                    <a class="list-group-item studio-location" href="#" style="cursor: default;">
-                                                        <span class="badge bg-success studio-location-distance"></span>
-                                                        <i class="fa fa-location-arrow icon-muted"></i>
-                                                        9550 Skillman St, Dallas, TX
-                                                    </a>
-                                                </div>
-                                            </section>
-                                            <section class="panel panel-default">
-                                                <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
-                                                    <div class="clearfix">
-                                                        <a href="#modal-form" data-toggle="modal" class="pull-left thumb-md avatar b-3x m-r">
-                                                            <img src="images/studios/Legacy.png" alt="...">
-                                                        </a>
-                                                        <div class="clear">
-                                                            <div class="h3 m-t-xs m-b-xs">
-                                                                Legacy Music Group
-                                                                <i class="fa fa-circle text-success pull-right text-xs m-t-sm"></i>
-                                                            </div>
-                                                            <small class="text-muted">Dallas, TX</small>
-                                                        </div>
-                                                    </div>
-                                                </header>
-                                                <div class="list-group no-radius alt">
-                                                    <a class="list-group-item studio-location" href="#" style="cursor: default;">
-                                                        <span class="badge bg-success studio-location-distance"></span>
-                                                        <i class="fa fa-location-arrow icon-muted"></i>
-                                                        2815 Main Street, Suite A, Dallas, TX
-                                                    </a>
-                                                </div>
-                                                <button id="getLocationBtn" onclick="getLocation()" style="display:none;">Get Location</button>
-                                                <div id="mapholder"></div>
-                                            </section>
+                        <section class="w-f-md">
+                            <section class="hbox stretch bg-black dker">
+                                <!-- side content -->
+                                <aside class="col-sm-5 no-padder" id="sidebar">
+                                    <section class="vbox animated fadeInUp">
+                                        <section class="scrollable">
+                                            <ul id="beats-container" class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
 
+                                            </ul>
+                                        </section>
+                                    </section>
+                                </aside>
+                            </section>
+                        </section>
+                        <footer class="footer bg-success dker">
+                            <div id="jp_container_N">
+                                <div class="jp-type-playlist">
+                                    <div id="jplayer_N" class="jp-jplayer hide"></div>
+                                    <div class="jp-gui">
+                                        <div class="jp-video-play hide">
+                                            <a class="jp-video-play-icon">play</a>
                                         </div>
+                                        <div class="jp-interface">
+                                            <div class="jp-controls">
+                                                <div><a class="jp-previous"><i class="icon-control-rewind i-lg"></i></a></div>
+                                                <div>
+                                                    <a class="jp-play"><i class="icon-control-play i-2x"></i></a>
+                                                    <a class="jp-pause hid"><i class="icon-control-pause i-2x"></i></a>
+                                                </div>
+                                                <div><a class="jp-next"><i class="icon-control-forward i-lg"></i></a></div>
+                                                <div class="hide"><a class="jp-stop"><i class="fa fa-stop"></i></a></div>
+                                                <div><a class="" data-toggle="dropdown" data-target="#playlist"><i class="icon-list"></i></a></div>
+                                                <div class="jp-progress hidden-xs">
+                                                    <div class="jp-seek-bar dk">
+                                                        <div class="jp-play-bar bg">
+                                                        </div>
+                                                        <div class="jp-title text-lt">
+                                                            <ul>
+                                                                <li></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hidden-xs hidden-sm jp-current-time text-xs text-muted"></div>
+                                                <div class="hidden-xs hidden-sm jp-duration text-xs text-muted"></div>
+                                                <div class="hidden-xs hidden-sm">
+                                                    <a class="jp-mute" title="mute"><i class="icon-volume-2"></i></a>
+                                                    <a class="jp-unmute hid" title="unmute"><i class="icon-volume-off"></i></a>
+                                                </div>
+                                                <div class="hidden-xs hidden-sm jp-volume">
+                                                    <div class="jp-volume-bar dk">
+                                                        <div class="jp-volume-bar-value lter"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a class="jp-shuffle" title="shuffle"><i class="icon-shuffle text-muted"></i></a>
+                                                    <a class="jp-shuffle-off hid" title="shuffle off"><i class="icon-shuffle text-lt"></i></a>
+                                                </div>
+                                                <div>
+                                                    <a class="jp-repeat" title="repeat"><i class="icon-loop text-muted"></i></a>
+                                                    <a class="jp-repeat-off hid" title="repeat off"><i class="icon-loop text-lt"></i></a>
+                                                </div>
+                                                <div class="hide">
+                                                    <a class="jp-full-screen" title="full screen"><i class="fa fa-expand"></i></a>
+                                                    <a class="jp-restore-screen" title="restore screen"><i class="fa fa-compress text-lt"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-playlist dropup" id="playlist">
+                                        <ul class="dropdown-menu aside-xl dker">
+                                            <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+                                            <li class="list-group-item"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="jp-no-solution hide">
+                                        <span>Update Required</span>
+                                        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </footer>
                     </section>
                     <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
                 </section>
             </section>
         </section>
     </section>
-
-    <div class="modal fade" id="modal-form">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body wrapper-lg">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <a href="#" class="btn btn-lg btn-success btn-block m-b-sm" data-dismiss="modal"><i class="pull-left"><img height="25px" width="25px" src="https://cloud.githubusercontent.com/assets/10437313/12951113/bedd5fa0-cfde-11e5-8be3-b0357675d5bd.gif"></i>Schedule ride with Lyft</a>
-                            <a href="#" class="btn btn-lg btn-default btn-block m-b-sm" data-dismiss="modal"><i class="fa pull-left"></i>Not Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div>
-
     <script src="js/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="js/bootstrap.js"></script>
     <!-- App -->
     <script src="js/app.js"></script>
     <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
-    <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
     <script src="js/app.plugin.js"></script>
+    <script type="text/javascript" src="js/custom/populateBeatList.js"></script>
+    <script type="text/javascript" src="js/custom/searchInPage.js"></script>
     <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
     <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
     <script type="text/javascript" src="js/jPlayer/demo.js"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
-    <script type="text/javascript" src="js/custom/geolocation.js"></script>
     </body>
     </html>
 
