@@ -4,7 +4,7 @@
 
     $error_msg = "";
 
-    if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['firstname'], $_POST['lastname'])) {
+    if (isset($_POST['username'], $_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['p'])) {
         // Sanitize and validate the data passed in
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
