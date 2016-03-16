@@ -70,13 +70,13 @@ function showPositionLyft(position) {
             var a = obj.eta_estimates;
 
             a.forEach(function(entry) {
-                string += entry.display_name + ", " + entry.eta_seconds + "</br>";
+                string += entry.display_name + ", " + entry.eta_seconds + "<br>";
             });
         }
 
         var lyftAlert = document.getElementById("lyft-info");
         lyftAlert.style = "display: !important;";
-        lyftAlert.innerText += string;
+        lyftAlert.innerHtml += string;
 
         //alert(string);
     });
