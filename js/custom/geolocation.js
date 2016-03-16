@@ -70,12 +70,12 @@ function showPositionLyft(position) {
             var a = obj.eta_estimates;
 
             a.forEach(function(entry) {
-                string += entry.display_name + ", " + entry.eta_seconds + "<br>";
+                string += "<p>" + entry.display_name + ", " + entry.eta_seconds + "</p>";
             });
         }
 
         var lyftAlert = document.getElementById("lyft-info");
-        lyftAlert.style = "display: !important;";
+        lyftAlert.show();
         lyftAlert.innerHtml += string;
 
         //alert(string);
