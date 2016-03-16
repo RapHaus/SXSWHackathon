@@ -12,8 +12,10 @@ $(document).ready(function(){
     },
     swfPath: "js/jPlayer",
     supplied: "m4a",
+    errorAlerts: true,
     smoothPlayBar: true,
     keyEnabled: true,
+    solution: "html",
     audioFullScreen: false
   });
   
