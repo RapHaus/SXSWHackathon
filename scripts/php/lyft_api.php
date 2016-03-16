@@ -56,5 +56,5 @@
     // close curl resource to free up system resources
     curl_close($ch);
 
-    return $output;
+    echo $output;
 ?>
