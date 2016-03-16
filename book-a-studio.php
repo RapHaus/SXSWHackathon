@@ -221,21 +221,21 @@ $username = htmlentities($_SESSION['username']);
                                             </div>
                                         </section>
                                         <section class="panel panel-default">
-                                            <a id="#modal-form" data-toggle="modal">
-                                            <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
-                                                <div class="clearfix">
-                                                    <a href="#" class="pull-left thumb-md avatar b-3x m-r">
-                                                        <img src="images/studios/Legacy.png" alt="...">
-                                                    </a>
-                                                    <div class="clear">
-                                                        <div class="h3 m-t-xs m-b-xs">
-                                                            Legacy Music Group
-                                                            <i class="fa fa-circle text-success pull-right text-xs m-t-sm"></i>
+                                            <a href="#modal-form" data-toggle="modal">
+                                                <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
+                                                    <div class="clearfix">
+                                                        <a href="#" class="pull-left thumb-md avatar b-3x m-r">
+                                                            <img src="images/studios/Legacy.png" alt="...">
+                                                        </a>
+                                                        <div class="clear">
+                                                            <div class="h3 m-t-xs m-b-xs">
+                                                                Legacy Music Group
+                                                                <i class="fa fa-circle text-success pull-right text-xs m-t-sm"></i>
+                                                            </div>
+                                                            <small class="text-muted">Dallas, TX</small>
                                                         </div>
-                                                        <small class="text-muted">Dallas, TX</small>
                                                     </div>
-                                                </div>
-                                            </header>
+                                                </header>
                                             </a>
                                             <div class="list-group no-radius alt">
                                                 <a class="list-group-item studio-location" href="#" style="cursor: default;">
