@@ -73,7 +73,7 @@ if (login_check($mysqli) == true) {
                 <!--<div class="text-center m-t m-b"><a href="#"><small>Forgot password?</small></a></div>-->
                 <div class="line line-dashed"></div>
                 <p class="text-muted text-center"><small>Do not have an account?</small></p>
-                <a href="signup.html" class="btn btn-lg btn-info btn-block rounded">Create an account</a>
+                <a href="signup.php" class="btn btn-lg btn-info btn-block rounded">Create an account</a>
             </form>
         </section>
     </div>
