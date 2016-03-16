@@ -221,6 +221,7 @@ $username = htmlentities($_SESSION['username']);
                                             </div>
                                         </section>
                                         <section class="panel panel-default">
+                                            <a="#modal-form" data-toggle="modal">
                                             <header class="panel-heading bg-light no-border studio-selection" style="cursor: pointer;">
                                                 <div class="clearfix">
                                                     <a href="#" class="pull-left thumb-md avatar b-3x m-r">
@@ -235,6 +236,7 @@ $username = htmlentities($_SESSION['username']);
                                                     </div>
                                                 </div>
                                             </header>
+                                            </a>
                                             <div class="list-group no-radius alt">
                                                 <a class="list-group-item studio-location" href="#" style="cursor: default;">
                                                     <span class="badge bg-success studio-location-distance"></span>
@@ -245,6 +247,21 @@ $username = htmlentities($_SESSION['username']);
                                             <button id="getLocationBtn" onclick="getLocation()" style="display:none;">Get Location</button>
                                             <div id="mapholder"></div>
                                         </section>
+
+                                        <div class="modal fade" id="modal-form">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body wrapper-lg">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <a href="#" class="btn btn-lg btn-success btn-block m-b-sm"><i class="pull-left"><img height="25px" width="25px" src="https://cloud.githubusercontent.com/assets/10437313/12951113/bedd5fa0-cfde-11e5-8be3-b0357675d5bd.gif"></i>Schedule ride with Lyft</a>
+                                                                <a href="#" class="btn btn-lg btn-default btn-block m-b-sm"><i class="fa pull-left"></i>Not Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>

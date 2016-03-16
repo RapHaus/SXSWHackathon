@@ -102,9 +102,9 @@
                 <section class="m-b-lg">
                     <form action="#">
                         </br></br></br></br></br>
-                        <a href="signup.html" class="btn btn-lg btn-success btn-block rounded">Artist</a>
-                        <a href="signup.html" class="btn btn-lg btn-success btn-block rounded">Fan</a>
-                        <a href="signup.html" class="btn btn-lg btn-success btn-block rounded">Producer</a>
+                        <a href="#" class="btn btn-lg btn-success btn-block rounded">Artist</a>
+                        <a href="#" class="btn btn-lg btn-success btn-block rounded">Fan</a>
+                        <a href="#" class="btn btn-lg btn-success btn-block rounded">Producer</a>
                     </form>
                 </section>
             </div>
