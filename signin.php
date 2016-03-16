@@ -59,7 +59,7 @@ if (login_check($mysqli) == true) {
                 echo '</div>';
 
             } else {
-               
+
             }
             ?>
             <form action="includes/process_login.php" method="post" name="login_form">
