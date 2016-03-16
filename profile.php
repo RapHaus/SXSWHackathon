@@ -130,6 +130,12 @@
                                             <span class="font-bold">Book a Session</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="fullcalendar.php">
+                                            <i class="icon-calendar icon text-success"></i>
+                                            <span class="font-bold">My Calendar</span>
+                                        </a>
+                                    </li>
                                     <li class="m-b hidden-nav-xs"></li>
                                 </ul>
                             </nav>
