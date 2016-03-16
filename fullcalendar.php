@@ -97,7 +97,56 @@ $username = htmlentities($_SESSION['username']);
                     <section class="w-f-md scrollable">
                         <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
 
-                            <?php echo $nav; ?>
+                            <!--nav -->
+                            <nav class='nav-primary hidden-xs' >
+                                <ul class='nav bg clearfix' >
+                                    <li class='hidden-nav-xs padder m-t m-b-sm text-xs text-muted' >
+                                        Discover Beats
+                                    </li >
+                                    <li >
+                                        <a href = 'pick-beats.php' >
+                                            <i class='icon-disc icon text-success' ></i >
+                                            <span class='font-bold' > What's new</span>
+                                        </a>
+                                    </li>
+                                    <li class='m-b hidden-nav-xs'></li>
+                                </ul>
+                                <ul class='nav bg clearfix'>
+                                    <li class='hidden-nav-xs padder m-t m-b-sm text-xs text-muted'>
+                                    <li >
+                                        <a href = 'top-music.php' >
+                                            <i class='icon-disc icon text-success' ></i >
+                                            <span class='font-bold' > Top Music</span>
+                                        </a>
+                                    </li>
+                                    <li class='m-b hidden-nav-xs'></li>
+                                </ul>
+                                <ul class='nav bg clearfix'>
+                                    <li class='hidden-nav-xs padder m-t m-b-sm text-xs text-muted'>
+                                        Recording Studio
+                                    </li>
+                                    <li>
+                                        <a href='#'>
+                                            <i class='icon-microphone icon text-success'></i>
+                                            <span class='font-bold'>Book a Session</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href='fullcalendar.php'>
+                                            <i class='icon-calendar icon text-success'></i>
+                                            <span class='font-bold'>My Calendar</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href='upload.php'>
+                                            <i class='icon-cloud-upload icon text-success'></i>
+                                            <span class='font-bold'>Upload</span>
+                                        </a>
+                                    </li>
+                                    <li class='m-b hidden-nav-xs'></li>
+                                </ul>
+                            </nav>
+                            <!-- / nav -->
                         </div>
                     </section>
 
