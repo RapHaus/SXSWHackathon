@@ -12,9 +12,8 @@
   <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />  
-    <link rel="stylesheet" href="js/fullcalendar/fullcalendar.css" type="text/css"  />
-  <link rel="stylesheet" href="js/fullcalendar/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
+  <link rel="stylesheet" href="css/upload.css" type="text/css" />  
+    <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
     <script src="js/ie/excanvas.js"></script>
@@ -131,7 +130,7 @@
               <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
                 
 
-  
+
                 <!-- nav -->                 
                 <nav class="nav-primary hidden-xs">
                   <ul class="nav bg clearfix">
@@ -481,76 +480,31 @@
         </aside>
         <!-- /.aside -->
         <section id="content">
-          <section class="vbox">
-              <section class="scrollable">
-                <section class="hbox">
-                  <!-- .aside -->
-                  <aside class="aside-lg bg-light dker wrapper">
-                    <div id="myEvents" class="panel b-a bg-light">
-                      <div class="panel-heading bg-white">
-                        Dragable events
-                      </div>
-                      <ul class="list-unstyled wrapper m-b-none">
-                        <li class="m-b-xxs">
-                          <div class="r bg-white b-l b-2x b-info wrapper-xxs">
-                            Meet a friend
-                          </div>
-                        </li>
-                        <li class="m-b-xxs">
-                          <div class="r bg-white b-l b-2x b-danger wrapper-xxs">
-                            Tom's birthday
-                          </div>
-                        </li>
-                        <li class="m-b-xxs">
-                          <div class="r bg-white b-l b-2x b-primary wrapper-xxs">
-                            Feed cat
-                          </div>
-                        </li>
-                        <li class="m-b-xxs">
-                          <div class="r bg-white b-l b-2x b-warning wrapper-xxs">
-                            Sports
-                          </div>
-                        </li>
-                        <li class="m-b-xxs">
-                          <div class="r bg-primary bg wrapper-xxs">
-                            Tom's birthday
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="checkbox">
-                      <label class="i-checks"><input type='checkbox' checked id='drop-remove' /><i></i> remove after drop</label>
-                    </div>
-                  </aside>
-                  <!-- /.aside -->    
-                  <!-- .aside -->
-                  <aside class="wrapper">
-                    <section class="panel no-border bg-light">
-                      <header class="panel-heading bg-primary clearfix">
-                        <div class="btn-group pull-right" data-toggle="buttons">
-                          <label class="btn btn-sm btn-bg btn-default active" id="monthview">
-                            <input type="radio" name="options">Month
-                          </label>
-                          <label class="btn btn-sm btn-bg btn-default" id="weekview">
-                            <input type="radio" name="options">Week
-                          </label>
-                          <label class="btn btn-sm btn-bg btn-default" id="dayview">
-                            <input type="radio" name="options">Day
-                          </label>
+          <section class="vbox">          
+            <section class="scrollable wrapper">
+                  <section class="vbox">
+                    <section class="scrollable">
+                      <div class="wrapper">
+                        <div class="text-center m-b m-t">
+                          <form id="trackUpload" action="/user/uploads/track" method="POST">
+                              <a href="#" class="thumb-lg">
+                                <img src="images/upload_image.png" class="img-circle">
+                              </a>
+                            <div class="h3 m-t-xs m-b-xs">Upload Track</div>
+                            <label class="h3 m-t-xs m-b-xs btn-upload">
+                              <input type="file" name="fileupload" >
+                              <button class="btn">Browse</button>
+                            </label>
+                            <label class="h3 m-t-xs m-b-xs btn-upload">
+                              <button type="submit" class="btn">Upload Track</button>
+                            </label>
+                          </form>
                         </div>
-                        <span class="m-t-xs inline text-white">
-                          Fullcalendar
-                        </span>
-                      </header>
-                      <div class="calendar" id="calendar">
-
                       </div>
                     </section>
-                  </aside>
-                  <!-- /.aside -->
-                </section>
-              </section>          
+                  </section>
             </section>
+          </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
         </section>
       </section>
@@ -562,12 +516,7 @@
   <!-- App -->
   <script src="js/app.js"></script>  
   <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-  <!-- fullcalendar -->
-<script src="js/jquery.ui.touch-punch.min.js"></script>
-<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="js/fullcalendar/fullcalendar.min.js"></script>
-<script src="js/fullcalendar/demo.js"></script>
-  <script src="js/app.plugin.js"></script>
+    <script src="js/app.plugin.js"></script>
   <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
   <script type="text/javascript" src="js/jPlayer/demo.js"></script>
