@@ -75,7 +75,7 @@ $username = htmlentities($_SESSION['username']);
                             <a href="#">Settings</a>
                         </li>
                         <li>
-                            <a href="profile.html">Profile</a>
+                            <a href="profile.php">Profile</a>
                         </li>
                         <li>
                             <a href="#">
@@ -158,7 +158,7 @@ $username = htmlentities($_SESSION['username']);
                                         <a href="#">Settings</a>
                                     </li>
                                     <li>
-                                        <a href="profile.html">Profile</a>
+                                        <a href="profile.php">Profile</a>
                                     </li>
                                     <li>
                                         <a href="#">

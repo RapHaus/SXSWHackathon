@@ -11,7 +11,7 @@
 <html lang="en" class="app">
 <head>
     <meta charset="utf-8" />
-    <title>Musik | Web Application</title>
+    <title>Rap.Haus | Web Application</title>
     <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
@@ -38,7 +38,7 @@
             <a href="index.html" class="navbar-brand text-lt">
                 <i class="icon-earphones"></i>
                 <img src="images/logo.png" alt="." class="hide">
-                <span class="hidden-nav-xs m-l-sm">Musik</span>
+                <span class="hidden-nav-xs m-l-sm">Rap.Haus</span>
             </a>
             <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
                 <i class="icon-settings"></i>
@@ -76,7 +76,7 @@
                             <a href="#">Settings</a>
                         </li>
                         <li>
-                            <a href="profile.html">Profile</a>
+                            <a href="profile.php">Profile</a>
                         </li>
                         <li>
                             <a href="#">
@@ -159,7 +159,7 @@
                                         <a href="#">Settings</a>
                                     </li>
                                     <li>
-                                        <a href="profile.html">Profile</a>
+                                        <a href="profile.php">Profile</a>
                                     </li>
                                     <li>
                                         <a href="#">
