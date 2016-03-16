@@ -56,6 +56,5 @@
     // close curl resource to free up system resources
     curl_close($ch);
 
-    $eta = json_decode($output, true);
-    return $eta;
+    return $output;
 ?>
