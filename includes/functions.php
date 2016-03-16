@@ -34,19 +34,20 @@ function sec_session_start() {
     session_start();            // Start the PHP session 
     session_regenerate_id();    // regenerated the session, delete the old one. 
 }
+
 function login($email, $password, $mysqli) {
     // Using prepared statements means that SQL injection is not possible. 
-    if ($stmt = $mysqli->prepare("SELECT id, username, password, salt 
+    if ($stmt = $mysqli->prepare("SELECT id, username, password
 				  FROM members 
                                   WHERE email = ? LIMIT 1")) {
         $stmt->bind_param('s', $email);  // Bind "$email" to parameter.
         $stmt->execute();    // Execute the prepared query.
         $stmt->store_result();
         // get variables from result.
-        $stmt->bind_result($user_id, $username, $db_password, $salt);
+        $stmt->bind_result($user_id, $username, $db_password);
         $stmt->fetch();
         // hash the password with the unique salt.
-        $password = hash('sha512', $password . $salt);
+        $password = hash('sha512', $password);
         if ($stmt->num_rows == 1) {
             // If the user exists we check if the account is locked
             // from too many login attempts 
