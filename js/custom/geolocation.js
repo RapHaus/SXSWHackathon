@@ -71,7 +71,7 @@ function showPositionLyft(position) {
             var a = obj.eta_estimates;
 
             a.forEach(function(entry) {
-                string += this.display_name + ", " + this.eta_seconds + '<\br>';
+                string += entry.display_name + ", " + entry.eta_seconds + '<\br>';
             });
         }
 
