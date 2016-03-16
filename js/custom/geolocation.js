@@ -66,7 +66,7 @@ function showPositionLyft(position) {
     $.get(lyftApiUrl, function(data, status){
         debugger;
         alert(data);
-    }
+    });
 
     //var studioLocations = document.getElementsByClassName("studio-location");
 
