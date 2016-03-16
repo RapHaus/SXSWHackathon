@@ -264,8 +264,8 @@ $username = htmlentities($_SESSION['username']);
             <div class="modal-body wrapper-lg">
                 <div class="row">
                     <div class="col-sm-12">
-                        <a href="#" class="btn btn-lg btn-success btn-block m-b-sm"><i class="pull-left"><img height="25px" width="25px" src="https://cloud.githubusercontent.com/assets/10437313/12951113/bedd5fa0-cfde-11e5-8be3-b0357675d5bd.gif"></i>Schedule ride with Lyft</a>
-                        <a href="#" class="btn btn-lg btn-default btn-block m-b-sm"><i class="fa pull-left"></i>Not Now</a>
+                        <a href="#" class="btn btn-lg btn-success btn-block m-b-sm" data-dismiss="modal"><i class="pull-left"><img height="25px" width="25px" src="https://cloud.githubusercontent.com/assets/10437313/12951113/bedd5fa0-cfde-11e5-8be3-b0357675d5bd.gif"></i>Schedule ride with Lyft</a>
+                        <a href="#" class="btn btn-lg btn-default btn-block m-b-sm" data-dismiss="modal"><i class="fa pull-left"></i>Not Now</a>
                     </div>
                 </div>
             </div>
